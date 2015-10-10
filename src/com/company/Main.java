@@ -34,35 +34,27 @@ public class Main {
                         System.out.println("Did not detect integer, assuming mathematical operator");
                         int a = 0;
                         int b = 0;
+                        a = s.top();
+                        s.pop();
+                        b= s.top();
+                        s.pop();
                        switch(input.charAt(0)){
                            case '*':
-                               a = s.top();
-                               s.pop();
-                               b= s.top();
-                               s.pop();
                                s.push(a * b);
                                System.out.println(a + " * " + b);
+                               break;
                            case '+':
-                               a = s.top();
-                               s.pop();
-                               b= s.top();
-                               s.pop();
                                s.push(a + b);
                                System.out.println(a + " + " + b);
+                               break;
                            case '-':
-                               a = s.top();
-                               s.pop();
-                               b= s.top();
-                               s.pop();
                                s.push(a - b);
                                System.out.println(a + " - " + b);
+                               break;
                            case '/':
-                               a = s.top();
-                               s.pop();
-                               b= s.top();
-                               s.pop();
                                s.push(a / b);
                                System.out.println(a + " / " + b);
+                               break;
                        }
                         System.out.println("Answer: "+s.top());
 
@@ -86,40 +78,27 @@ public class Main {
                         System.out.println("Did not detect integer, assuming mathematical operator");
                         int a = 0;
                         int b = 0;
-                        switch(input){
-                            case "*":
-                                a = s.top();
-                                s.pop();
-                                b= s.top();
-                                s.pop();
+                        a = s.top();
+                        s.pop();
+                        b= s.top();
+                        s.pop();
+                        switch(input.charAt(0)){
+                            case '*':
                                 s.push(a * b);
                                 System.out.println("Answer: " + s.top());
-                            case "+":
-                                a = s.top();
-                                s.pop();
-                                b= s.top();
-                                s.pop();
+                                break;
+                            case '+':
                                 s.push(a + b);
                                 System.out.println("Answer: " + s.top());
-
-                            case "-":
-                                a = s.top();
-                                s.pop();
-                                b = s.top();
-                                s.pop();
+                                break;
+                            case '-':
                                 s.push(a - b);
                                 System.out.println("Answer: " + s.top());
-
-                            case "/":
-                                a = s.top();
-                                s.pop();
-                                b= s.top();
-                                s.pop();
+                                break;
+                            case '/':
+                                s.push(a / b);
                                 System.out.println("Answer: " + s.top());
-
-                            default: System.out.println("Error please enter something");
-
-
+                                break;
                         }
 
                     }
