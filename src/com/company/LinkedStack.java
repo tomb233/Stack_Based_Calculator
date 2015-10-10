@@ -47,7 +47,21 @@ public class LinkedStack<T> implements Stack<T> {
         }
         return result;
     }
-    
+    @Override
+    public T getLoc(int i){
+        ListNode<T> node = top;
+        T result = null;
+
+        for(int s=0;s<i;s++){
+            node = node.getNext();
+            result = node.getItem();
+
+        }
+        return result;
+
+    }
+
+
     private int size() {
         ListNode<T> node = top;
         int result = 0;

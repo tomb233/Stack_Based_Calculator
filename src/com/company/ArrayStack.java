@@ -63,4 +63,13 @@ public class ArrayStack<T> implements Stack<T> {
 
         return result;
     }
+
+    @Override
+
+    public T getLoc(int i){
+        T result = storage[i];
+        return result;
+
+    }
+
 }
